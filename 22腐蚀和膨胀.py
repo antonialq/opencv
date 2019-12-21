@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def erode_demo(image):
     print(image.shape)
     gray = cv.cvtColor(image,cv.COLOR_BGR2GRAY)
@@ -20,7 +20,7 @@ def dilate_demo(image):
     dst = cv.dilate(binary,kernel)
     cv.imshow("dilate_image",dst)
 
-src = cv.imread("/Users/qing.liu/PycharmProjects/毕设准备/opencv/test.jpeg")
+src = cv.imread("/opencv/images/test.jpeg")
 #cv.imshow("input image", src)
 erode_demo(src)
 dilate_demo(src)

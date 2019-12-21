@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def line_detection(image):
     gray = cv.cvtColor(image,cv.COLOR_BGR2GRAY)
     edges = cv.Canny(gray,50,150,apertureSize=3)
@@ -29,7 +29,7 @@ def line_detect_possible_demo(image):
     cv.imshow("line1", dst)
 
 
-src = cv.imread("/Users/qing.liu/PycharmProjects/毕设准备/opencv/test.jpeg")
+src = cv.imread("/opencv/images/test.jpeg")
 #cv.imshow("input image", src)
 line_detection(src)
 line_detect_possible_demo(src)

@@ -1,5 +1,6 @@
 import cv2 as cv
 import numpy as np
+import path_const
 
 def fill_color_demo(image):
     copyimg = image.copy()
@@ -20,7 +21,7 @@ def fill_binary_demo():
     cv.imshow("fill B",image)
 
 #region of interest
-src = cv.imread("//opencv/test.jpeg")
+src = cv.imread(path_const.IMAGE_PATHS[0])
 cv.namedWindow("input image", cv.WINDOW_AUTOSIZE)
 cv.imshow("input image", src)
 face = src[200:400,100:300]

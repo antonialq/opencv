@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 '''
 【canny算法介绍】
 高斯模糊-灰度转换-计算梯度-非最大信号抑制-高低阈值输出二值图像
@@ -18,7 +18,7 @@ def edge_demo(image):
     dst = cv.bitwise_and(image,image,mask=edge_output)
     cv.imshow("Color Edge",dst)
 
-src = cv.imread("/Users/qing.liu/PycharmProjects/毕设准备/opencv/test.jpeg")
+src = cv.imread("/opencv/images/test.jpeg")
 #cv.imshow("input image", src)
 edge_demo(src)
 cv.waitKey(0)

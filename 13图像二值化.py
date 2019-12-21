@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def threhold_demo(image):
     gray = cv.cvtColor(image,cv.COLOR_BGR2GRAY)
     ret, binary = cv.threshold(gray,127,255,cv.THRESH_TOZERO | cv.THRESH_OTSU)

@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def contours_demo(image):
     dst = cv.GaussianBlur(image,(3,3),0)
     gray = cv.cvtColor(dst,cv.COLOR_BGR2GRAY)
@@ -13,7 +13,7 @@ def contours_demo(image):
         print(i)
     cv.imshow("detect contours", image)
 
-src = cv.imread("/Users/qing.liu/PycharmProjects/毕设准备/opencv/test.jpeg")
+src = cv.imread("/opencv/images/test.jpeg")
 #cv.imshow("input image", src)
 contours_demo(src)
 cv.waitKey(0)

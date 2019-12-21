@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
+import path_const
 
 def plot_demo(image):
     plt.hist(image.ravel(), 256, [0,256])
@@ -14,7 +15,7 @@ def image_demo(image):
         plt.xlim([0,256])
     plt.show()
 
-src = cv.imread("//opencv/test.jpeg")
+src = cv.imread(path_const.IMAGE_PATHS[3])
 cv.imshow("input image", src)
 plot_demo(src)
 image_demo(src)

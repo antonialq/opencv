@@ -1,5 +1,6 @@
 import cv2 as cv
 import numpy as np
+import path_const
 
 def clamp(pv):
     if pv>255:
@@ -22,7 +23,7 @@ def gaussian_noise(image):
                 image[row, col, 0] = clamp(r + s[0])
     cv.imshow("noise image",image)
 
-src = cv.imread("//opencv/test.jpeg")
+src = cv.imread(path_const.IMAGE_PATHS[3])
 cv.imshow("input image", src)
 dst = cv.GaussianBlur(src, (0,0), 15)
 cv.imshow("gause blur",dst)

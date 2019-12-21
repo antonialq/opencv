@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def lapalian_demo(image):
     dst = cv.Laplacian(image,cv.CV_32F)
     lpls = cv.convertScaleAbs(dst)
@@ -18,7 +18,7 @@ def soble_demo(image):
     gradxy = cv.addWeighted(gradx,0.5,grady,0.5,0)
     cv.imshow("gradient",gradxy)
 
-src = cv.imread("/Users/qing.liu/PycharmProjects/毕设准备/opencv/test.jpeg")
+src = cv.imread("/opencv/images/test.jpeg")
 #cv.imshow("input image", src)
 lapalian_demo(src)
 soble_demo(src)

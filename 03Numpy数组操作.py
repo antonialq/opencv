@@ -1,5 +1,6 @@
 import cv2 as cv
 import numpy as np
+import path_const
 
 def access_pixel(image):
     print(image.shape)
@@ -22,10 +23,10 @@ def create_image():
     img = np.zeros([400,400,3],np.float32)
     cv.imshow("new image",img)
     img[: ,: ,2] = np.ones([400,400])*10
-    cv.imwrite("//opencv/myimage1.jpeg", img)
+    cv.imwrite(path_const.IMAGE_PATHS[0], img)
     
 
-src = cv.imread("//opencv/WechatIMG1.jpeg")
+src = cv.imread(path_const.IMAGE_PATHS[0])
 cv.namedWindow("input image", cv.WINDOW_FREERATIO)
 cv.imshow("input image", src)
 create_image()

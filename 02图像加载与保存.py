@@ -1,5 +1,7 @@
 import cv2 as cv
 import numpy as np
+import path_const
+
 
 def video_demo():
     capture = cv.VideoCapture(0)
@@ -19,12 +21,11 @@ def get_image_info(image):
     pixel_data = np.array(src)
     print(pixel_data)
 
-src = cv.imread("//opencv/WechatIMG1.jpeg")
-cv.namedWindow("input image", cv.WINDOW_AUTOSIZE)
+src = cv.imread(path_const.IMAGE_PATHS[0])
 cv.imshow("input image", src)
 get_image_info(src)
 gray = cv.cvtColor(src,cv.COLOR_BGR2GRAY)
-cv.imwrite("//opencv/WechatIMG1.jpeg", gray)
+cv.imwrite(path_const.IMAGE_PATHS[0], gray)
 #video_demo()
 cv.waitKey(0)
 

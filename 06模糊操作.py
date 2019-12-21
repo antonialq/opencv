@@ -1,6 +1,6 @@
 import cv2 as cv
 import numpy as np
-
+import path_const
 '''
 【模糊操作】
 -均值模糊
@@ -22,7 +22,7 @@ def custom_blur_demo(image):
     dst = cv.filter2D(image,-1,kernel=kernel)
     cv.imshow("blur2",dst)
 
-src = cv.imread("//opencv/test.jpeg")
+src = cv.imread(path_const.IMAGE_PATHS[0])
 cv.imshow("input image", src)
 blur_demo(src)
 median_blur_demo(src)

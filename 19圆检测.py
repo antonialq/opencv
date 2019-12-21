@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def detect_circle_demo(image):
     dst = cv.pyrMeanShiftFiltering(image,10,100)
     cimage = cv.cvtColor(dst, cv.COLOR_BGR2GRAY)
@@ -13,7 +13,7 @@ def detect_circle_demo(image):
     cv.imshow("circles",image)
 
 
-src = cv.imread("/Users/qing.liu/PycharmProjects/毕设准备/opencv/test.jpeg")
+src = cv.imread("/opencv/images/test.jpeg")
 #cv.imshow("input image", src)
 detect_circle_demo(src)
 cv.waitKey(0)

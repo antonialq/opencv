@@ -8,6 +8,7 @@ YUV-linux default
 '''
 import cv2 as cv
 import numpy as np
+import path_const
 
 def extract_object_demo(image):
     capture = cv.VideoCapture("")
@@ -36,7 +37,7 @@ def color_space_demo(image):
     Crcv = cv.cvtColor(image, cv.COLOR_RGB2YCrCb)
     cv.imshow("crcv", Crcv)
 
-src = cv.imread("//opencv/WechatIMG1.jpeg")
+src = cv.imread(path_const.IMAGE_PATHS[2])
 cv.namedWindow("input image", cv.WINDOW_AUTOSIZE)
 cv.imshow("input image", src)
 b,g,r = cv.split(src)

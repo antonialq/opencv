@@ -1,6 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
+import path_const
 
 '''
 【直方图均衡化】
@@ -39,8 +40,8 @@ def hist_compare(image1,image2):
     match3 = cv.compareHist(hist1, hist2, cv.HISTCMP_CHISQR_ALT)
     print("巴氏距离：%s,相关性：%s,卡方：%s"%(match1,match2,match3))
 
-src1 = cv.imread("//opencv/test.jpeg")
-src2 = cv.imread("//opencv/WechatIMG1.jpeg")
+src1 = cv.imread(path_const.IMAGE_PATHS[3])
+src2 = cv.imread(path_const.IMAGE_PATHS[2])
 hist_compare(image1=src2,image2=src1)
 cv.waitKey(0)
 

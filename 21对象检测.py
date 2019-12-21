@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def measure_object(image):
     gray = cv.cvtColor(image,cv.COLOR_BGR2GRAY)
     ret,binary =  cv.threshold(gray,0,255,cv.THRESH_BINARY|cv.THRESH_OTSU)
@@ -26,7 +26,7 @@ def measure_object(image):
             cv.drawContours(image,contours,i,(0,255,0),2)
     cv.imshow("measure_object",image)
 
-src = cv.imread("/Users/qing.liu/PycharmProjects/毕设准备/opencv/test.jpeg")
+src = cv.imread("/opencv/images/test.jpeg")
 #cv.imshow("input image", src)
 measure_object(src)
 cv.waitKey(0)

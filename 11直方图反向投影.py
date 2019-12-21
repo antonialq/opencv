@@ -1,7 +1,7 @@
 import cv2 as cv
 import numpy as np
 from matplotlib import pyplot as plt
-
+import path_const
 def back_projection_demo():
     sample = cv.imread("//opencv/test.jpeg")
     target = cv.imread("//opencv/WechatIMG1.jpeg")

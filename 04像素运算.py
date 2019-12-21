@@ -1,5 +1,6 @@
 import cv2 as cv
 import numpy as np
+import path_const
 
 def add_demo(m1,m2):
     dst = cv.add(m1,m2)
@@ -39,8 +40,8 @@ def contrast_brightness_demo(image,c,b):
     cv.imshow("con_bri_demo",dst)
 
 
-src1 = cv.imread("//opencv/myimage.jpeg")
-src2 = cv.imread("//opencv/myimage1.jpeg")
+src1 = cv.imread(path_const.IMAGE_PATHS[0])
+src2 = cv.imread(path_const.IMAGE_PATHS[0])
 print(src1.shape)
 print(src2.shape)
 cv.imshow("image1", src1)
